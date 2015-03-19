@@ -26,5 +26,17 @@ A first ruleset for the Quickstart
         song = event:attr("input");
     }
   }
+  rule find_hymn {
+    select when explicit sung
+    pre {
+      song = event:attr(“song”);
+    }
+    if(song.match(re#.*god.*#)) then {
+      noop();
+    }
+    fired {
+      raise explicit event found_hymn;
+    }
+  }
 }
 
