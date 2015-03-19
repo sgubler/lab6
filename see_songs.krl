@@ -18,7 +18,7 @@ A first ruleset for the Quickstart
  
   }
   rule songs {
-    select when echo message
+    select when echo message msg_type re#song#
     send_directive("sing") with
       song = event:attr("input");
   }
