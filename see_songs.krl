@@ -29,7 +29,7 @@ A first ruleset for the Quickstart
   rule find_hymn {
     select when explicit sung
     pre {
-      song = event:attr(“song”);
+      song = event:attr("song").klog("<< song >>");
     }
     if(song.match(re#.*god.*#)) then {
       noop();
