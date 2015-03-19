@@ -1,6 +1,6 @@
 ruleset see_songs {
   meta {
-    name “See Songs”
+    name "See Songs"
     description <<
 A first ruleset for the Quickstart
 >>
@@ -19,7 +19,8 @@ A first ruleset for the Quickstart
   }
   rule songs {
     select when echo message
-    send_directive(“sing”) with
+    send_directive("sing") with
       song = event:attr("input");
   }
 }
+
