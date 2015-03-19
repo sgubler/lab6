@@ -24,7 +24,7 @@ A first ruleset for the Quickstart
   }
   rule message {
     select when echo message
-    send_directive(“say”) with
-      something = event:attr(“input”);
+    send_directive("say") with
+      something = event:attr("input");
   }
 }
